@@ -11,10 +11,10 @@ function canRetry(currentRetry: number, retries: number, retryStatus: number[], 
     return retries > 0 && currentRetry < retries && retryStatus.some(s => s == error.response?.status);
 }
 
-export default function AxiosSimpleRetry(axios: AxiosInstance, {
+export default function axiosSimpleRetry(axios: AxiosInstance, {
     retries = 3,
     retryDelay = 1000,
-    retryStatus = [500, 501, 502, 503],
+    retryStatus = [500, 501, 502, 503, 504],
     incrementalDelay = false,
 }: AxiosRetryProps) {
     let currentRetry = 0;
