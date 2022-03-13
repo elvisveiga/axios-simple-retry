@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -34,10 +35,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 function canRetry(currentRetry, retries, retryStatus, error) {
     return retries > 0 && currentRetry < retries && retryStatus.some(function (s) { var _a; return s == ((_a = error.response) === null || _a === void 0 ? void 0 : _a.status); });
 }
-export default function axiosSimpleRetry(axios, _a) {
+function axiosSimpleRetry(axios, _a) {
     var _this = this;
     var _b = _a.retries, retries = _b === void 0 ? 3 : _b, _c = _a.retryDelay, retryDelay = _c === void 0 ? 1000 : _c, _d = _a.retryStatus, retryStatus = _d === void 0 ? [500, 501, 502, 503, 504] : _d, _e = _a.incrementalDelay, incrementalDelay = _e === void 0 ? false : _e;
     var currentRetry = 0;
@@ -60,4 +62,5 @@ export default function axiosSimpleRetry(axios, _a) {
         });
     }); });
 }
+exports.default = axiosSimpleRetry;
 //# sourceMappingURL=index.js.map
