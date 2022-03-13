@@ -2,7 +2,8 @@
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "target": "es5",
-      "module": "commonjs",
+      "module": "ES2015",
+      "moduleResolution": "Node",
       "outDir": "./dist",
       "strict": true,
       "noUnusedLocals": true,

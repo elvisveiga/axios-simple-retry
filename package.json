@@ -1,14 +1,10 @@
 {
   "name": "axios-simple-retry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple lib to configure axios to retry failed requests",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "unpkg": "dist/index.umd.js",
-  "engines": {
-    "node": ">=10.7.0"
-  },
   "scripts": {
     "build": "tsc --declaration",
     "clean": "tsc --build --clean"
